@@ -7,9 +7,10 @@ const app = express();
 app.use(cors({ origin: "*" })); // Allow all origins
 app.use(express.json());
 
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+// Temporarily hardcode the API key here for testing purposes
+const OPENAI_API_KEY = "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";
 
-// Debugging: Log API Key (Remove this after testing)
+// Debugging: Log API Key (Ensure it's loaded correctly)
 console.log("OpenAI API Key:", OPENAI_API_KEY ? "Loaded ✅" : "Missing ❌");
 
 app.post("/api/generate-text", async (req, res) => {
